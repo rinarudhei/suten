@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use 'styles/variables';
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/barlow-semi-condensed-v16-latin-700') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/barlow-semi-condensed-v16-latin-600') format('woff2');
+}
+
+body {
+  min-height: 100vh;
+  font-family: variables.$font-primary;
+  background: radial-gradient(
+    134.34% 134.34% at 50% 0%,
+    map.get(variables.$colors, gradients-1-start),
+    map.get(variables.$colors, gradients-1-end) 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
