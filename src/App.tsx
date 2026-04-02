@@ -1,4 +1,4 @@
-import stypes from './App.scss';
+import './App.scss';
 
 function App() {
   return <></>;

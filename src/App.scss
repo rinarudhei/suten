@@ -1,5 +1,4 @@
-@use 'sass:map';
-@use 'styles/variables';
+@use './styles/index';
 
 @font-face {
   font-family: 'Barlow Semi Condensed';
@@ -19,11 +18,11 @@
 
 body {
   min-height: 100vh;
-  font-family: variables.$font-primary;
+  font-family: index.$font-primary;
   background: radial-gradient(
     134.34% 134.34% at 50% 0%,
-    map.get(variables.$colors, gradients-1-start),
-    map.get(variables.$colors, gradients-1-end) 100%
+    index.$gradient-1-start,
+    index.$gradient-1-end 100%
   );
   background-repeat: no-repeat;
   background-attachment: fixed;

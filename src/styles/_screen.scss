@@ -1,0 +1,17 @@
+// _screen.scss
+// Breakpoints
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1366px;
+
+// Mixins
+@mixin onTablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
