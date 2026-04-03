@@ -1,0 +1,28 @@
+@use '../../styles/index';
+
+$half-width-tablet: -695.17px / 2; // -347.585px
+$half-width: -311px / 2; // -347.585px
+
+.header {
+  @include index.flex-col-center;
+  width: 311px;
+  height: 96px;
+  position: absolute;
+  top: 32px;
+  border: 2px solid index.$gray-600;
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX($half-width);
+}
+
+@include index.onTablet {
+  .header {
+    width: fit-content;
+    height: fit-content;
+    top: 48px;
+    transform: translateX($half-width-tablet);
+    border: 2px solid index.$gray-600;
+    border-radius: 15px;
+    padding: index.$spacing-200 index.$spacing-300;
+  }
+}

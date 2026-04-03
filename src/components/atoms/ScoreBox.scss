@@ -26,3 +26,26 @@
     color: index.$gray-600;
   }
 }
+
+@include index.onTablet {
+  .score-box {
+    @include index.flex-center;
+    width: fit-content;
+    height: fit-content;
+    background: white;
+    border-radius: 8px;
+    padding: index.$spacing-200 index.$spacing-600;
+
+    &__content {
+      width: 54.5px;
+    }
+
+    &__text {
+      @include index.text-preset-6;
+    }
+
+    &__value {
+      @include index.text-preset-1;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@use '../../styles/index';
+
+.suten-logo {
+  width: 81.62px;
+  height: 47.06px;
+
+  @include index.onTablet {
+    width: 155.48px;
+    height: 92.68px;
+  }
+}

@@ -1,0 +1,13 @@
+@use '../../styles/index';
+
+.header-content {
+  @include index.flex-between;
+  width: 284px;
+  height: fit-content;
+}
+
+@include index.onTablet {
+  .header-content {
+    width: 643.18px;
+  }
+}

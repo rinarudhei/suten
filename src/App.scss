@@ -17,6 +17,7 @@
 }
 
 body {
+  @include index.flex-col-center;
   min-height: 100vh;
   font-family: index.$font-primary;
   background: radial-gradient(
