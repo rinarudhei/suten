@@ -1,0 +1,28 @@
+@use '../../styles/index';
+
+.score-box {
+  @include index.flex-center;
+  width: 80px;
+  height: 72px;
+  background: white;
+  border-radius: 4px;
+
+  &__content {
+    position: flex;
+    flex-direction: column;
+    width: 33px;
+  }
+
+  &__text {
+    @include index.text-preset-8;
+    text-align: center;
+    color: index.$blue-700;
+    text-wrap: nowrap;
+  }
+
+  &__value {
+    @include index.text-preset-3;
+    text-align: center;
+    color: index.$gray-600;
+  }
+}
