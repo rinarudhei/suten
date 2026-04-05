@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router';
 import './App.scss';
 import GamePiece from './components/atoms/GamePiece';
+import PiecesConnector from './components/atoms/PiecesConnector';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       {import.meta.env.DEV && (
         <Route
           path='/playground'
-          element={<GamePiece type='spock' isHoverable size='lg-3' />}
+          element={<PiecesConnector connectorType='triangle' />}
         />
       )}
     </Routes>

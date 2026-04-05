@@ -1,0 +1,21 @@
+@use '../../styles/index';
+
+.pieces-connector {
+  width: 166px;
+  height: 188px;
+
+  @include index.onTablet {
+    width: 254px;
+    height: 287px;
+  }
+}
+
+.pieces-connector-pentagon {
+  width: 227px;
+  height: 227px;
+
+  @include index.onTablet {
+    width: 345px;
+    height: 345px;
+  }
+}
