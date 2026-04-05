@@ -81,8 +81,17 @@ $xl-3-height: 300px;
     }
   }
 
-  &.winner {
-  }
+  // &.winner {
+  //   scale: 2;
+  //   background: white;
+  //   border: none;
+  //   border-radius: index.$rounded-full;
+  //   position: absolute;
+  //   top: 0px;
+  //   opacity: 1;
+  //   transition: opacity 0.3s ease;
+  //   z-index: 1;
+  // }
 
   .hover-light {
     scale: 1.2;
@@ -97,14 +106,17 @@ $xl-3-height: 300px;
   }
 
   &__img {
+    position: relative;
     border-radius: 100%;
-    z-index: 50;
+    z-index: 10;
+
     &.hoverable {
       cursor: pointer;
     }
   }
 
-  &:hover .hover-light {
+  &__img.hoverable:hover ~ .hover-light,
+  &__img.hoverable:hover + .hover-light {
     opacity: 0.1;
   }
 }
