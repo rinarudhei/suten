@@ -24,10 +24,10 @@ const imageMap: Record<GamePieceType, string> = {
 };
 
 function GamePiece({
+  type,
   size = 'sm-1',
   isWinner = false,
   isHoverable = false,
-  type,
   className = '',
   ...props
 }: React.ComponentProps<'div'> & GamePieceProps) {
@@ -40,6 +40,9 @@ function GamePiece({
       />
 
       <div className={clsx(isHoverable && 'hover-light')} />
+      <div className={clsx(isWinner && 'winner-light')} data-size='xl' />
+      <div className={clsx(isWinner && 'winner-light')} data-size='lg' />
+      <div className={clsx(isWinner && 'winner-light')} data-size='sm' />
     </div>
   );
 }

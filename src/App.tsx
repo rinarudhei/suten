@@ -10,7 +10,7 @@ function App() {
       {import.meta.env.DEV && (
         <Route
           path='/playground'
-          element={<GamePiece type='lizard' size='lg-2' isHoverable={true} />}
+          element={<GamePiece type='lizard' size='lg-2' isWinner={true} />}
         />
       )}
     </Routes>
