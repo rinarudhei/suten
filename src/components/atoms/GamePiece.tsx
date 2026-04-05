@@ -8,10 +8,11 @@ import Lizard from '../../assets/piece-lizard-xs.svg';
 import Spock from '../../assets/piece-spock-xs.svg';
 
 type GamePieceProps = {
+  type: GamePieceType;
   size?: 'sm-1' | 'lg-1' | 'lg-2' | 'lg-3' | 'xl-3';
   isWinner?: boolean;
   isHoverable?: boolean;
-  type: GamePieceType;
+  className?: string;
 };
 
 const imageMap: Record<GamePieceType, string> = {
@@ -27,15 +28,21 @@ function GamePiece({
   isWinner = false,
   isHoverable = false,
   type,
-}: GamePieceProps) {
+  className = '',
+  ...props
+}: React.ComponentProps<'div'> & GamePieceProps) {
   return (
-    <div className={clsx('game-piece', size, isWinner && 'winner')}>
+    <div
+      className={clsx('game-piece', isWinner && 'winner', className)}
+      data-size={size}
+      {...props}
+    >
       <img
         className={clsx('game-piece__img', isHoverable && 'hoverable')}
         src={imageMap[type]}
         alt='game piece '
       />
-      <div className='hover-light' />
+      <div className={clsx(isHoverable && 'hover-light')} />
     </div>
   );
 }

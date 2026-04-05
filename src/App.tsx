@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router';
 import './App.scss';
-import Button from './components/atoms/Button';
+import GamePiece from './components/atoms/GamePiece';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       {import.meta.env.DEV && (
         <Route
           path='/playground'
-          element={<Button variant='primary'>PLAY AGAIN</Button>}
+          element={<GamePiece type='rock' size='xl-3' isHoverable={true} />}
         />
       )}
     </Routes>
