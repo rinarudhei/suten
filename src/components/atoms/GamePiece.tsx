@@ -36,7 +36,7 @@ function GamePiece({
       <img
         className={clsx('game-piece__img', isHoverable && 'hoverable')}
         src={imageMap[type]}
-        alt='game piece '
+        alt={`game piece ${type}`}
       />
 
       <div className={clsx(isHoverable && 'hover-light')} />

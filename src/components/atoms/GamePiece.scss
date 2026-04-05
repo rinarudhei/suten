@@ -115,7 +115,6 @@ $xl-3-height: 300px;
     }
   }
 
-  &__img.hoverable:hover ~ .hover-light,
   &__img.hoverable:hover + .hover-light {
     opacity: 0.1;
   }
