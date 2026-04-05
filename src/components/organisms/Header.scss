@@ -1,7 +1,8 @@
 @use '../../styles/index';
+@use 'sass:math';
 
-$half-width-tablet: -695.17px / 2; // -347.585px
-$half-width: -311px / 2; // -347.585px
+$half-width: math.div(-311px, 2); // -347.585px
+$half-width-tablet: math.div(-695.17px, 2); // -347.585px
 
 .header {
   @include index.flex-col-center;
