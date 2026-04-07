@@ -1,6 +1,6 @@
 @use '../../styles/index';
 
-.gstep-one {
+.pieces-container {
   @include index.flex-center;
   width: 311px;
   height: 281px;
@@ -25,7 +25,7 @@
 }
 
 @include index.onTablet {
-  .gstep-one {
+  .pieces-container {
     width: 478px;
     height: 430px;
 
