@@ -1,16 +1,17 @@
 import PiecesContainer from '../molecules/PiecesContainer';
-import GameContainer from '../organisms/GameContainer';
+import MainGame from '../organisms/MainGame';
 import Header from '../organisms/Header';
 
-function GameStepOne() {
+function SutenGame() {
   return (
     <>
       <Header />
-      <GameContainer>
+      <MainGame>
+        {/* Step 1 */}
         <PiecesContainer />
-      </GameContainer>
+      </MainGame>
     </>
   );
 }
 
-export default GameStepOne;
+export default SutenGame;

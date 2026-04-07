@@ -1,6 +1,6 @@
 @use '../../styles//index';
 
-.game-container {
+.main-game {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -19,13 +19,26 @@
 }
 
 @include index.onTablet {
-  .game-container {
+  .main-game {
     top: 262px;
 
     .dialog-trigger {
       bottom: -40px;
-      left: 455px;
       transform: none;
+
+      //clamp for rules-button positioning
+      $min-left: 455px;
+      $max-left: calc(285px + 476px);
+      $min-width: 768px;
+      $max-width: 1366px;
+      left: clamp(
+        $min-left,
+        calc(
+          #{$min-left} + (#{$max-left} - #{$min-left}) *
+            ((100vw - #{$min-width}) / (#{$max-width} - #{$min-width}))
+        ),
+        $max-left
+      );
     }
   }
 }
