@@ -7,7 +7,7 @@ import Rules from '../../assets/image-rules.svg';
 function DialogRules() {
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild>
+      <Dialog.Trigger asChild className='dialog-trigger'>
         <Button variant='ghost'>RULES</Button>
       </Dialog.Trigger>
       <Dialog.Portal>

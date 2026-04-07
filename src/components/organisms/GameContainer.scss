@@ -1,0 +1,31 @@
+@use '../../styles//index';
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  position: absolute;
+  top: 227px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .dialog-trigger {
+    position: absolute;
+    bottom: -186px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@include index.onTablet {
+  .game-container {
+    top: 262px;
+
+    .dialog-trigger {
+      bottom: -40px;
+      left: 455px;
+      transform: none;
+    }
+  }
+}

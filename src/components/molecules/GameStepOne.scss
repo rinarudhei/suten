@@ -4,10 +4,7 @@
   @include index.flex-center;
   width: 311px;
   height: 281px;
-  position: absolute;
-  top: 227px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
 
   &__paper {
     position: absolute;
@@ -31,8 +28,6 @@
   .gstep-one {
     width: 478px;
     height: 430px;
-    position: absolute;
-    top: 262px;
 
     &__paper {
     }
