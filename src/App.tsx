@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router';
 import './App.scss';
 import GamePiece from './components/atoms/GamePiece';
+import DialogRules from './components/organisms/DialogRules';
 
 function App() {
   return (
@@ -8,10 +9,7 @@ function App() {
       <Route path='/' element={<></>} />
       <Route path='/big-bang-theory' element={<></>} />
       {import.meta.env.DEV && (
-        <Route
-          path='/playground'
-          element={<GamePiece type='lizard' size='lg-2' isWinner={true} />}
-        />
+        <Route path='/playground' element={<DialogRules />} />
       )}
     </Routes>
   );

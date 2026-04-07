@@ -7,7 +7,9 @@ function Button({
   variant = 'primary',
   className = '',
   ...props
-}: React.ComponentProps<'button'> & { variant?: 'primary' | 'ghost' } & {
+}: React.ComponentProps<'button'> & {
+  variant?: 'primary' | 'ghost' | 'icon';
+} & {
   asChild?: boolean;
 }) {
   const Comp = asChild ? Slot.Root : 'button';

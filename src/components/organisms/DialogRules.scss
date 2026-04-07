@@ -1,0 +1,108 @@
+@use '../../styles/index';
+.dialog-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  &__inner {
+    @include index.flex-col-between;
+    gap: 113px;
+    margin-top: 95px;
+
+    .dialog-header {
+      @include index.flex-center;
+      width: 100%;
+      .dialog-title {
+        @include index.text-preset-4;
+        color: index.$navy-900;
+      }
+
+      .close-button__img {
+        display: none;
+      }
+    }
+
+    .dialog-description {
+      width: 303.37px;
+      height: 269.63px;
+    }
+
+    .footer {
+      padding-top: calc(155px - 113px);
+    }
+  }
+}
+
+@include index.onTablet {
+  .dialog-content {
+    height: fit-content;
+    padding: index.$spacing-400;
+    border-radius: 8px;
+    box-shadow: 0px 3px 3px 0px #00000032;
+    width: fit-content;
+    max-width: 500px;
+    max-height: 85vh;
+    padding: index.$spacing-400;
+
+    &__inner {
+      @include index.flex-col-between;
+      margin-top: 0px;
+      gap: index.$spacing-600;
+      width: 336.1px;
+
+      .dialog-header {
+        @include index.flex-between;
+        width: 100%;
+        .dialog-title {
+          @include index.text-preset-4;
+          color: index.$navy-900;
+        }
+
+        .close-button__img {
+          display: inline-block;
+          width: 19.01px;
+          height: 19.01px;
+        }
+      }
+
+      .footer {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
