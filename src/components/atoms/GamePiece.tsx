@@ -39,10 +39,10 @@ function GamePiece({
         alt={`game piece ${type}`}
       />
 
-      <div className={clsx(isHoverable && 'hover-light')} />
-      <div className={clsx(isWinner && 'winner-light')} data-size='xl' />
-      <div className={clsx(isWinner && 'winner-light')} data-size='lg' />
-      <div className={clsx(isWinner && 'winner-light')} data-size='sm' />
+      {isHoverable && <div className={clsx('hover-light')} />}
+      {isWinner && <div className='winner-light' data-size='xl' />}
+      {isWinner && <div className='winner-light' data-size='lg' />}
+      {isWinner && <div className='winner-light' data-size='sm' />}
     </div>
   );
 }

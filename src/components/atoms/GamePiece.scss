@@ -53,10 +53,8 @@ $xl-3-height: 300px;
 }
 
 .game-piece {
-  position: absolute;
-  top: 0;
-  left: 0;
   border-radius: 100%;
+  position: relative;
 
   &[data-size='sm-1'] {
     img,
@@ -102,10 +100,9 @@ $xl-3-height: 300px;
     }
   }
 
-  &.xs-1 {
+  &[data-size='xs-1'] {
     img,
-    .hover-light,
-    .winner-light {
+    .hover-light {
       width: $xs-1-width;
       height: $xs-1-height;
     }
@@ -115,7 +112,7 @@ $xl-3-height: 300px;
     border: none;
     border-radius: index.$rounded-full;
     position: absolute;
-    top: 0px;
+    top: 0;
     opacity: 0.05;
     transition: opacity 0.3s ease;
     scale: 0;
@@ -139,8 +136,8 @@ $xl-3-height: 300px;
     border: none;
     border-radius: index.$rounded-full;
     position: absolute;
-    top: 0px;
     opacity: 0;
+    top: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
   }
