@@ -7,7 +7,7 @@ import type { GamePieceType, GameResultType } from '../../types/types';
 import pickRandomPiece from '../../utils/gameEngine';
 import StepThree from '../organisms/StepThree';
 import DialogRules from '../molecules/DialogRules';
-import GameResult from '../molecules/GameResult';
+import { useScoreStore } from '../../store/store';
 
 function SutenGame() {
   const [step, setStep] = React.useState<1 | 1.5 | 2 | 3>(1);
@@ -21,6 +21,8 @@ function SutenGame() {
   const [resultType, setResultType] = React.useState<
     GameResultType | undefined
   >(undefined);
+
+  const increaseScore = useScoreStore((state) => state.increaseScore);
 
   const playerPickTurn = React.useCallback((piece: GamePieceType) => {
     setSelectedPiece(piece);
@@ -66,6 +68,12 @@ function SutenGame() {
       });
     }
   }, [selectedPiece, opponentPiece]);
+
+  React.useEffect(() => {
+    if (resultType === 'win') {
+      increaseScore();
+    }
+  }, [resultType]);
   return (
     <>
       <Header />
