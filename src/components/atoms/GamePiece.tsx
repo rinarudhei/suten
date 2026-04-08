@@ -9,7 +9,7 @@ import Spock from '../../assets/piece-spock-xs.svg';
 
 type GamePieceProps = {
   type: GamePieceType;
-  size?: 'sm-1' | 'xs-1' | 'xxs-1' | 'lg-1' | 'sm-2' | 'lg-2' | 'lg-3' | 'xl-3';
+  size?: 'xs-1' | 'sm-2';
   isWinner?: boolean;
   isHoverable?: boolean;
   className?: string;

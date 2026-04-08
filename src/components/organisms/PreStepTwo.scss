@@ -1,0 +1,10 @@
+@use '../../styles/index';
+
+.pre-step-two {
+  @include index.flex-center;
+  gap: index.$spacing-500;
+
+  @include index.onTablet {
+    gap: index.$spacing-1000;
+  }
+}
