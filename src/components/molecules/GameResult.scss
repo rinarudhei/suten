@@ -1,0 +1,18 @@
+@use '../../styles/index';
+
+.game-result {
+  @include index.flex-col-between;
+  width: 226px;
+  gap: index.$spacing-200;
+
+  &__text {
+    @include index.text-preset-2;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 3px 3px 0px #00000032;
+  }
+
+  &__button {
+    text-wrap: nowrap;
+  }
+}

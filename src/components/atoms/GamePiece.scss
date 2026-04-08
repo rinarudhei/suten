@@ -73,6 +73,24 @@ $xl-3-height: 300px;
     }
   }
 
+  &[data-size='sm-2'] {
+    img,
+    .hover-light,
+    .winner-light {
+      width: $sm-2-width;
+      height: $sm-2-height;
+    }
+
+    @include index.onTablet {
+      img,
+      .hover-light,
+      .winner-light {
+        width: $lg-2-width;
+        height: $lg-2-height;
+      }
+    }
+  }
+
   &[data-size='lg-2'] {
     img,
     .hover-light,

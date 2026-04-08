@@ -1,0 +1,37 @@
+@use '../../styles/index';
+
+$width-sm: 129.37px;
+$height-sm: 132.66px;
+$width-lg: 292.61px;
+$height-lg: 286.7px;
+
+$placeholder-width-sm: 99.31px;
+$placeholder-height-sm: 99.33px;
+$placeholder-width-lg: 224.63px;
+$placeholder-height-lg: 224.63px;
+
+.piece-placeholder {
+  @include index.flex-center;
+  height: $height-sm;
+  width: $width-sm;
+
+  &__content {
+    width: $placeholder-width-sm;
+    height: $placeholder-height-sm;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: index.$rounded-full;
+    cursor: pointer;
+  }
+}
+
+@include index.onTablet {
+  .piece-placeholder {
+    width: $width-lg;
+    height: $height-lg;
+
+    &__content {
+      width: $placeholder-width-lg;
+      height: $placeholder-height-lg;
+    }
+  }
+}

@@ -1,8 +1,7 @@
 import { Routes, Route } from 'react-router';
 import './App.scss';
 import SutenGame from './components/templates/SutenGame';
-import PieceCard from './components/atoms/PieceCard';
-import GamePiece from './components/atoms/GamePiece';
+import GameResult from './components/molecules/GameResult';
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <Route path='/' element={<SutenGame />} />
       <Route path='/big-bang-theory' element={<></>} />
       {import.meta.env.DEV && (
-        <Route path='/playground' element={<SutenGame />} />
+        <Route path='/playground' element={<GameResult />} />
       )}
     </Routes>
   );

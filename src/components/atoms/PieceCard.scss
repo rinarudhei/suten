@@ -1,0 +1,33 @@
+@use '../../styles/index';
+
+$card-width-sm: 145px;
+$card-width-lg: 292.61px;
+$card-height-lg: 396px;
+
+.piece-card {
+  @include index.flex-col-between;
+  gap: index.$spacing-200;
+  width: $card-width-sm;
+
+  p {
+    @include index.text-preset-7;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 3px 3px 0px #00000032;
+    text-wrap: nowrap;
+  }
+}
+
+@include index.onTablet {
+  .piece-card {
+    @include index.flex-col-between;
+    gap: 0;
+    width: $card-width-lg;
+    height: $card-height-lg;
+    flex-direction: column-reverse;
+
+    p {
+      @include index.text-preset-5;
+    }
+  }
+}
