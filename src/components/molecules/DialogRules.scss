@@ -108,3 +108,20 @@
     opacity: 1;
   }
 }
+
+.dialog-trigger {
+  position: absolute;
+  top: 654px;
+  right: 50%;
+  transform: translateX(50%);
+
+  @include index.onTablet {
+    right: 39px;
+    top: 696px;
+    transform: none;
+  }
+
+  @include index.onDesktop {
+    right: 32px;
+  }
+}

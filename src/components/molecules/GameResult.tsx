@@ -1,18 +1,33 @@
+import clsx from 'clsx';
+import type { GameResultType } from '../../types/types';
 import Button from '../atoms/Button';
 import './GameResult.scss';
 
 type GameResultProps = {
-  isWinner?: boolean;
-  isDraw?: boolean;
+  gameResultType: GameResultType;
+  className?: string;
+  resetGame: () => void;
 };
 
-function GameResult({ isWinner = false, isDraw = false }: GameResultProps) {
+const gameResultMap: Record<GameResultType, string> = {
+  win: 'YOU WIN',
+  lose: 'YOU LOSE',
+  draw: 'DRAW',
+};
+
+function GameResult({
+  gameResultType,
+  className = '',
+  resetGame,
+}: React.ComponentProps<'div'> & GameResultProps) {
   return (
-    <div className='game-result'>
-      <p className='game-result__text'>
-        {isWinner ? 'YOU WIN' : isDraw ? 'DRAW' : 'YOU LOSE'}
-      </p>
-      <Button className='game-result__button' variant='primary'>
+    <div className={clsx('game-result', className)}>
+      <p className='game-result__text'>{gameResultMap[gameResultType]}</p>
+      <Button
+        className='game-result__button'
+        variant='primary'
+        onClick={resetGame}
+      >
         PLAY AGAIN
       </Button>
     </div>

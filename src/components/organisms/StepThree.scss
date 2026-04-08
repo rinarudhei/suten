@@ -1,0 +1,39 @@
+@use '../../styles/index';
+
+.step-three {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  align-items: center;
+  gap: index.$spacing-800;
+
+  @include index.onTablet {
+    width: 601px;
+    gap: 0;
+  }
+
+  @include index.onDesktop {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__pieces {
+    display: flex;
+    flex-direction: row;
+    gap: index.$spacing-500;
+    width: 100%;
+    height: fit-content;
+
+    @include index.onTablet {
+      @include index.flex-between;
+      gap: 0;
+    }
+
+    @include index.onDesktop {
+      justify-content: baseline;
+      width: fit-content;
+      height: fit-content;
+      gap: index.$spacing-800;
+    }
+  }
+}

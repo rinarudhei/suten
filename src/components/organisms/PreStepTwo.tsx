@@ -6,8 +6,9 @@ import './PreStepTwo.scss';
 
 type PreStepTwoProps = {
   selectedPiece: GamePieceType;
+  opponentPiece?: GamePieceType;
 };
-function PreStepTwo({ selectedPiece }: PreStepTwoProps) {
+function PreStepTwo({ selectedPiece, opponentPiece }: PreStepTwoProps) {
   return (
     <div className='pre-step-two'>
       <PieceCard playerType='current'>
@@ -19,7 +20,15 @@ function PreStepTwo({ selectedPiece }: PreStepTwoProps) {
       </PieceCard>
 
       <PieceCard playerType='opponent'>
-        <PiecePlaceholder />
+        {opponentPiece ? (
+          <GamePiece
+            className='selected-piece'
+            size='sm-2'
+            type={opponentPiece}
+          />
+        ) : (
+          <PiecePlaceholder />
+        )}
       </PieceCard>
     </div>
   );

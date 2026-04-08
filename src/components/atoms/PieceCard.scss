@@ -1,11 +1,16 @@
 @use '../../styles/index';
 
 $card-width-sm: 145px;
+
+$card-width-md: 228px;
+$card-height-md: 301px;
+
 $card-width-lg: 292.61px;
 $card-height-lg: 396px;
 
 .piece-card {
-  @include index.flex-col-between;
+  display: flex;
+  flex-direction: column;
   gap: index.$spacing-200;
   width: $card-width-sm;
 
@@ -29,5 +34,17 @@ $card-height-lg: 396px;
     p {
       @include index.text-preset-5;
     }
+  }
+
+  .piece-card.mode-three {
+    width: $card-width-md;
+    height: $card-height-md;
+  }
+}
+
+@include index.onDesktop {
+  .piece-card.mode-three {
+    width: $card-width-lg;
+    height: $card-height-lg;
   }
 }

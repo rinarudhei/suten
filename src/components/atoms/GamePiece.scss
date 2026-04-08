@@ -21,6 +21,9 @@ $lg-2-width: 292.61px;
 $lg-2-height: 300px;
 
 // STEP 3
+$sm-3-width: 129.37px;
+$sm-3-height: 132.66px;
+
 $lg-3-width: 200px;
 $lg-3-height: 205.1px;
 
@@ -85,6 +88,30 @@ $xl-3-height: 300px;
       img {
         width: $lg-2-width;
         height: $lg-2-height;
+      }
+    }
+  }
+
+  &[data-size='sm-3'] {
+    img,
+    .winner-light {
+      width: $sm-3-width;
+      height: $sm-3-height;
+    }
+
+    @include index.onTablet {
+      img,
+      .winner-light {
+        width: $lg-3-width;
+        height: $lg-3-height;
+      }
+    }
+
+    @include index.onDesktop {
+      img,
+      .winner-light {
+        width: $xl-3-width;
+        height: $xl-3-height;
       }
     }
   }

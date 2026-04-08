@@ -16,3 +16,17 @@
     text-wrap: nowrap;
   }
 }
+
+.game-result.result-inner {
+  display: none;
+  @include index.onDesktop {
+    display: flex;
+    z-index: 50;
+  }
+}
+
+.game-result.result-outer {
+  @include index.onDesktop {
+    display: none;
+  }
+}

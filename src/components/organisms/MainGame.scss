@@ -3,42 +3,34 @@
 .main-game {
   display: flex;
   flex-direction: column;
-  position: relative;
 
   position: absolute;
   top: 227px;
   left: 50%;
   transform: translateX(-50%);
 
-  .dialog-trigger {
-    position: absolute;
-    bottom: -186px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  // .dialog-trigger {
+  //   position: absolute;
+  //   top: calc(146px + 281px);
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
 }
 
 @include index.onTablet {
   .main-game {
     top: 262px;
 
-    .dialog-trigger {
-      bottom: -40px;
-      transform: none;
-
-      //clamp for rules-button positioning
-      $min-left: 455px;
-      $max-left: calc(285px + 476px);
-      $min-width: 768px;
-      $max-width: 1366px;
-      left: clamp(
-        $min-left,
-        calc(
-          #{$min-left} + (#{$max-left} - #{$min-left}) *
-            ((100vw - #{$min-width}) / (#{$max-width} - #{$min-width}))
-        ),
-        $max-left
-      );
-    }
+    // .dialog-trigger {
+    //   bottom: -40px;
+    //   transform: none;
+    //   right: 39px;
+    // }
   }
+}
+
+@include index.onDesktop {
+  // .dialog-trigger {
+  //   right: 32px;
+  // }
 }
