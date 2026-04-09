@@ -9,28 +9,13 @@
   left: 50%;
   transform: translateX(-50%);
 
-  // .dialog-trigger {
-  //   position: absolute;
-  //   top: calc(146px + 281px);
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  // }
+  .heading-two {
+    @include index.sr-only;
+  }
 }
 
 @include index.onTablet {
   .main-game {
     top: 262px;
-
-    // .dialog-trigger {
-    //   bottom: -40px;
-    //   transform: none;
-    //   right: 39px;
-    // }
   }
-}
-
-@include index.onDesktop {
-  // .dialog-trigger {
-  //   right: 32px;
-  // }
 }

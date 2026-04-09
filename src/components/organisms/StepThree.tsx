@@ -24,7 +24,7 @@ function StepThree({
           <GamePiece
             className='selected-piece'
             size='sm-3'
-            type={selectedPiece}
+            gamePieceType={selectedPiece}
             isWinner={gameResultType === 'win'}
           />
         </PieceCard>
@@ -40,7 +40,7 @@ function StepThree({
             <GamePiece
               className='selected-piece'
               size='sm-3'
-              type={opponentPiece}
+              gamePieceType={opponentPiece}
               isWinner={gameResultType === 'lose'}
             />
           ) : (

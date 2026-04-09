@@ -12,19 +12,19 @@ function PiecesContainer({ playerPickTurn }: PiecesContainerProps) {
       <PiecesConnector />
       <GamePiece
         className='pieces-container__paper'
-        type='paper'
+        gamePieceType='paper'
         isHoverable
         onClick={() => playerPickTurn('paper')}
       />
       <GamePiece
         className='pieces-container__scissor'
-        type='scissor'
+        gamePieceType='scissor'
         isHoverable
         onClick={() => playerPickTurn('scissor')}
       />
       <GamePiece
         className='pieces-container__rock'
-        type='rock'
+        gamePieceType='rock'
         isHoverable
         onClick={() => playerPickTurn('rock')}
       />

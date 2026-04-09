@@ -15,7 +15,7 @@ function PreStepTwo({ selectedPiece, opponentPiece }: PreStepTwoProps) {
         <GamePiece
           className='selected-piece'
           size='sm-2'
-          type={selectedPiece}
+          gamePieceType={selectedPiece}
         />
       </PieceCard>
 
@@ -24,7 +24,7 @@ function PreStepTwo({ selectedPiece, opponentPiece }: PreStepTwoProps) {
           <GamePiece
             className='selected-piece'
             size='sm-2'
-            type={opponentPiece}
+            gamePieceType={opponentPiece}
           />
         ) : (
           <PiecePlaceholder />

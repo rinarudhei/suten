@@ -27,6 +27,7 @@ function GameResult({
         className='game-result__button'
         variant='primary'
         onClick={resetGame}
+        aria-label='Play Again'
       >
         PLAY AGAIN
       </Button>
