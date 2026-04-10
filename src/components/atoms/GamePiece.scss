@@ -121,6 +121,7 @@ $xl-3-height: 300px;
     border-radius: index.$rounded-full;
     position: absolute;
     top: 0;
+    left: 0;
     opacity: 0.05;
     transition: opacity 0.3s ease;
     transform: scale(0);
@@ -146,6 +147,7 @@ $xl-3-height: 300px;
     position: absolute;
     opacity: 0;
     top: 0;
+    left: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
   }
@@ -174,7 +176,6 @@ $xl-3-height: 300px;
   color: inherit;
   cursor: pointer;
   outline: inherit;
-  /* Remove any default button styling */
   -webkit-appearance: none;
   -moz-appearance: none;
 }

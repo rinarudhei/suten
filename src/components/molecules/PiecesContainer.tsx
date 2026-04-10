@@ -10,24 +10,32 @@ function PiecesContainer({ playerPickTurn }: PiecesContainerProps) {
   return (
     <div className='pieces-container'>
       <PiecesConnector />
-      <GamePiece
-        className='pieces-container__paper'
-        gamePieceType='paper'
-        isHoverable
-        onClick={() => playerPickTurn('paper')}
-      />
-      <GamePiece
-        className='pieces-container__scissor'
-        gamePieceType='scissor'
-        isHoverable
-        onClick={() => playerPickTurn('scissor')}
-      />
-      <GamePiece
-        className='pieces-container__rock'
-        gamePieceType='rock'
-        isHoverable
-        onClick={() => playerPickTurn('rock')}
-      />
+      <ul>
+        <li>
+          <GamePiece
+            className='pieces-container__paper'
+            gamePieceType='paper'
+            isHoverable
+            onClick={() => playerPickTurn('paper')}
+          />
+        </li>
+        <li>
+          <GamePiece
+            className='pieces-container__scissor'
+            gamePieceType='scissor'
+            isHoverable
+            onClick={() => playerPickTurn('scissor')}
+          />
+        </li>
+        <li>
+          <GamePiece
+            className='pieces-container__rock'
+            gamePieceType='rock'
+            isHoverable
+            onClick={() => playerPickTurn('rock')}
+          />
+        </li>
+      </ul>
     </div>
   );
 }
