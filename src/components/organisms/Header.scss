@@ -24,6 +24,6 @@ $half-width-tablet: math.div(-695.17px, 2); // -347.585px
     transform: translateX($half-width-tablet);
     border: 2px solid index.$gray-600;
     border-radius: 15px;
-    padding: index.$spacing-200 index.$spacing-300;
+    padding: calc(index.$spacing-200 - 2px) calc(index.$spacing-300 - 2px);
   }
 }
