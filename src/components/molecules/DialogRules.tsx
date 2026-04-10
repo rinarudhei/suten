@@ -12,7 +12,7 @@ function DialogRules() {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className='dialog-overlay' />
-        <Dialog.Content className='dialog-content'>
+        <Dialog.Content className='dialog-content' id='radix-r_0_'>
           <div className='dialog-content__inner'>
             {/* Header */}
             <div className='dialog-header'>

@@ -2,7 +2,14 @@
 
 // Base: 1rem = 16px
 
-$font-primary: 'Barlow Semi Condensed';
+$font-primary:
+  'Barlow Semi Condensed',
+  'Helvetica Neue',
+  Arial,
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  sans-serif;
 
 @mixin text-preset-1 {
   font-family: 'Barlow Semi Condensed', sans-serif;

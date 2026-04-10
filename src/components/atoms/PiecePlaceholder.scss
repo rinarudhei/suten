@@ -18,7 +18,7 @@ $placeholder-height-lg: 224.63px;
   &__content {
     width: $placeholder-width-sm;
     height: $placeholder-height-sm;
-    background: rgba(0, 0, 0, 0.3);
+    background: index.$black-30;
     border-radius: index.$rounded-full;
     cursor: pointer;
   }

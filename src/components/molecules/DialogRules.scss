@@ -1,6 +1,6 @@
 @use '../../styles/index';
 .dialog-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: index.$black-50;
   position: fixed;
   inset: 0;
   animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -22,7 +22,7 @@
   &__inner {
     @include index.flex-col-between;
     gap: 113px;
-    margin-top: 95px;
+    margin-block-start: 95px;
 
     .dialog-header {
       @include index.flex-center;
@@ -34,6 +34,12 @@
 
       .close-button__img {
         display: none;
+      }
+
+      .close-button__img:focus {
+        outline: 1px solid black;
+        outline-offset: 1px;
+        border-radius: 4px;
       }
     }
 
@@ -58,11 +64,10 @@
     width: fit-content;
     max-width: 500px;
     max-height: 85vh;
-    padding: index.$spacing-400;
 
     &__inner {
       @include index.flex-col-between;
-      margin-top: 0px;
+      margin-block-start: 0px;
       gap: index.$spacing-600;
       width: 336.1px;
 
@@ -79,6 +84,12 @@
           width: 19.01px;
           height: 19.01px;
           cursor: pointer;
+        }
+
+        .close-button__img:focus {
+          outline: 1px solid black;
+          outline-offset: 1px;
+          border-radius: 4px;
         }
       }
 

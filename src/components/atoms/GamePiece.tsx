@@ -33,15 +33,17 @@ function GamePiece({
 }: React.ComponentProps<'button'> & GamePieceProps) {
   return (
     <button
-      className={clsx('game-piece', className, 'unstyled-button')}
+      className={clsx(
+        'game-piece',
+        className,
+        'unstyled-button',
+        isHoverable && 'game-piece--hoverable'
+      )}
       data-size={size}
       aria-label={`play ${gamePieceType}`}
       {...props}
     >
-      <img
-        className={clsx('game-piece__img', isHoverable && 'hoverable')}
-        src={imageMap[gamePieceType]}
-      />
+      <img className={clsx('game-piece__img')} src={imageMap[gamePieceType]} />
 
       {isHoverable && <div className={clsx('hover-light')} />}
       {isWinner && <div className='winner-light' data-size='xl' />}
