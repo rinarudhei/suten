@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Button.scss';
-import { Slot } from 'radix-ui';
+import { Slot } from '@radix-ui/react-slot';
 
 function Button({
   asChild = false,
@@ -12,7 +12,7 @@ function Button({
 } & {
   asChild?: boolean;
 }) {
-  const Comp = asChild ? Slot.Root : 'button';
+  const Comp = asChild ? Slot : 'button';
   return (
     <Comp
       data-slot='button'

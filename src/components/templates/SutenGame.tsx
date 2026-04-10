@@ -45,14 +45,16 @@ function SutenGame() {
   }, []);
 
   React.useEffect(() => {
-    if (step === 2) {
-      setTimeout(() => {
-        setLastStep();
-      }, 2000);
-    }
+    if (step !== 2) return;
+
+    setTimeout(() => {
+      setLastStep();
+    }, 2000);
   }, [step]);
 
   React.useEffect(() => {
+    if (!selectedPiece) return;
+
     if (opponentPiece) {
       setResultType(() => {
         if (selectedPiece === opponentPiece) return 'draw';
