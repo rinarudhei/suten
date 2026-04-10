@@ -29,8 +29,6 @@ function SutenGame() {
     setStep(2);
   }, []);
 
-  const setLastStep = React.useCallback(() => {}, []);
-
   const resetGame = React.useCallback(() => {
     setSelectedPiece(null);
     setOpponentPiece(undefined);
