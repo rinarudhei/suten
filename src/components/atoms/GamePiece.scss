@@ -59,6 +59,52 @@ $xl-3-height: 300px;
   border-radius: 100%;
   position: relative;
 
+  .winner-light {
+    background: white;
+    border: none;
+    border-radius: index.$rounded-full;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.05;
+    transition: opacity 0.3s ease;
+    transform: scale(0);
+
+    &[data-size='xl'] {
+      animation: winner-xl 1s ease forwards;
+
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+
+    &[data-size='lg'] {
+      animation: winner-lg 1s ease forwards;
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+
+    &[data-size='sm'] {
+      animation: winner-sm 1s ease forwards;
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+  }
+
+  .hover-light {
+    transform: scale(1.2);
+    background: white;
+    border: none;
+    border-radius: index.$rounded-full;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
   // step 1
   &[data-size='xs-1'] {
     img,
@@ -114,42 +160,6 @@ $xl-3-height: 300px;
         height: $xl-3-height;
       }
     }
-  }
-  .winner-light {
-    background: white;
-    border: none;
-    border-radius: index.$rounded-full;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.05;
-    transition: opacity 0.3s ease;
-    transform: scale(0);
-
-    &[data-size='xl'] {
-      animation: winner-xl 1s ease forwards;
-    }
-
-    &[data-size='lg'] {
-      animation: winner-lg 1s ease forwards;
-    }
-
-    &[data-size='sm'] {
-      animation: winner-sm 1s ease forwards;
-    }
-  }
-
-  .hover-light {
-    transform: scale(1.2);
-    background: white;
-    border: none;
-    border-radius: index.$rounded-full;
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
   }
 
   &__img {

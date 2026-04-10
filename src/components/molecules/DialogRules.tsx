@@ -21,7 +21,7 @@ function DialogRules() {
       </DialogTrigger>
       <DialogPortal>
         <DialogOverlay className='dialog-overlay' />
-        <DialogContent className='dialog-content' id='radix-r_0_'>
+        <DialogContent className='dialog-content' id='rules-dialog'>
           <div className='dialog-content__inner'>
             {/* Header */}
             <div className='dialog-header'>

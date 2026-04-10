@@ -12,7 +12,7 @@ $font-primary:
   sans-serif;
 
 @mixin text-preset-1 {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 4rem; // 64px / 16
   line-height: 1; // 100%
@@ -20,7 +20,7 @@ $font-primary:
 }
 
 @mixin text-preset-2 {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 3.5rem; // 56px / 16
   line-height: 1.2; // 120%
@@ -28,7 +28,7 @@ $font-primary:
 }
 
 @mixin text-preset-3 {
-  font-family: 'Barlow Semi Condensed';
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 2.5rem; // 40px / 16
   line-height: 1; // 100%
@@ -36,7 +36,7 @@ $font-primary:
 }
 
 @mixin text-preset-4 {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 2rem; // 32px / 16
   line-height: 1; // 100%
@@ -44,7 +44,7 @@ $font-primary:
 }
 
 @mixin text-preset-5 {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 1.5rem; // 24px / 16
   line-height: 1.35; // 135%
@@ -52,7 +52,7 @@ $font-primary:
 }
 
 @mixin text-preset-6 {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: $font-primary;
   font-weight: 600; // Semi700
   font-size: 1rem; // 16px / 16
   line-height: 1.2; // 120%
@@ -60,7 +60,7 @@ $font-primary:
 }
 
 @mixin text-preset-7 {
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 0.9375rem; // 15px / 16
   line-height: 2; // 200%
@@ -68,7 +68,7 @@ $font-primary:
 }
 
 @mixin text-preset-8 {
-  font-family: 'Barlow Semi Condensed';
+  font-family: $font-primary;
   font-weight: 600; // Semi700
   font-size: 0.625rem; // 10px / 16
   line-height: 1.2; // 120%
