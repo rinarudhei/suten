@@ -29,13 +29,7 @@ function SutenGame() {
     setStep(2);
   }, []);
 
-  const setLastStep = React.useCallback(() => {
-    const picked = pickRandomPiece();
-    setOpponentPiece(picked);
-    setTimeout(() => {
-      setStep(3);
-    }, 2000);
-  }, []);
+  const setLastStep = React.useCallback(() => {}, []);
 
   const resetGame = React.useCallback(() => {
     setSelectedPiece(null);
@@ -47,9 +41,14 @@ function SutenGame() {
   React.useEffect(() => {
     if (step !== 2) return;
 
-    setTimeout(() => {
-      setLastStep();
+    const timerId = setTimeout(() => {
+      const picked = pickRandomPiece();
+      setOpponentPiece(picked);
     }, 2000);
+
+    return () => {
+      clearTimeout(timerId);
+    };
   }, [step]);
 
   React.useEffect(() => {
@@ -68,6 +67,14 @@ function SutenGame() {
 
         return 'win';
       });
+
+      const timerId = setTimeout(() => {
+        setStep(3);
+      }, 2000);
+
+      return () => {
+        clearInterval(timerId);
+      };
     }
   }, [selectedPiece, opponentPiece]);
 
