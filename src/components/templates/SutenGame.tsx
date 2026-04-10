@@ -73,7 +73,7 @@ function SutenGame() {
       }, 2000);
 
       return () => {
-        clearInterval(timerId);
+        clearTimeout(timerId);
       };
     }
   }, [selectedPiece, opponentPiece]);
